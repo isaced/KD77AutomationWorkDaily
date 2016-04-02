@@ -10,7 +10,7 @@
 
 ### Show
 
-![demo](https://raw.github.com/isaced/KD77AutomationWorkDaily/master/demo.png)
+![demo](https://raw.githubusercontent.com/isaced/KD77AutomationWorkDaily/master/demo.gif)
 
 ### Help
 
