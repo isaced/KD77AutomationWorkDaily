@@ -53,7 +53,7 @@ def get_report():
         if commit.author.email == author_email:
             commit_datetime = datetime.datetime.fromtimestamp(commit.committed_date)
             if commit_datetime.year == today.year and commit_datetime.month == today.month and commit_datetime.day == today.day:
-                if len(commit.message.strip()) > 6: # exclude bugfix
+                if len(commit.message.strip()) > 6: # 长度在6以下的提交文案不记录 exclude bugfix
                     today_commit_messages.append(commit.message.strip())
 
     # 输出今天的 Commit
@@ -74,6 +74,7 @@ def get_report():
 
 def get_loaded_element(browser, xpath):
     WebDriverWait(browser, timeout).until(EC.presence_of_element_located((By.XPATH, xpath)))
+    print xpath
     return browser.find_element_by_xpath(xpath)
 
 def write_daily_report(report_str):
@@ -82,11 +83,13 @@ def write_daily_report(report_str):
     else:
         browser = webdriver.Chrome()
     try:
+        print "begin"
         browser.get("https://web.kd77.cn/")
         print browser.title
         browser.find_element_by_id("ext-comp-1001-username").send_keys(kd77_username)
         browser.find_element_by_id("ext-comp-1001-pwd").send_keys(kd77_password)
         browser.find_element_by_id("ext-comp-1001-btn").click() # 登陆
+        print "login"
 
         get_loaded_element(browser, "//li[@path='0-5']").click() # 工作汇报
         get_loaded_element(browser, "//li[@path='0-5-0']").click() # 我的工作汇报
