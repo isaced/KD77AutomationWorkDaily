@@ -11,8 +11,7 @@
 
 ### Show
 
-![chrome_demo](https://raw.githubusercontent.com/godblesshugh/KD77AutomationWorkDaily/master/chrome_demo.gif)
-
+[![asciicast](https://asciinema.org/a/41209.png)](https://asciinema.org/a/41209)
 
 ### Dev Log
 
