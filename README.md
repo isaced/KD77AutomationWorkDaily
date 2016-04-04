@@ -7,12 +7,17 @@
 ### Requirements
 - [Selenium](http://www.seleniumhq.org)
 - [GitPython](https://github.com/gitpython-developers/GitPython)
+- [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/)
 
 ### Show
 
-![demo](https://raw.githubusercontent.com/isaced/KD77AutomationWorkDaily/master/demo.gif)
+![chrome_demo](https://raw.githubusercontent.com/godblesshugh/KD77AutomationWorkDaily/master/chrome_demo.gif)
+
 
 ### Help
+
+* 使用 ChromeDriver 解决兼容性以及启动速度慢的问题。
+* 使用 WebDriverWait 解决 time.sleep() 不准确的问题
 
 > Error: Unable to access jarfile selenium-server-standalone-2.53.0.jar
 
