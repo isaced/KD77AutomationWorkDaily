@@ -9,6 +9,8 @@
 - [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/)
 - [GitPython](https://github.com/gitpython-developers/GitPython)
 
+> pip install -r requirements.pip
+
 ### Show
 
 [![asciicast](https://asciinema.org/a/41209.png)](https://asciinema.org/a/41209)
