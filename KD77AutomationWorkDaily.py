@@ -75,10 +75,12 @@ def get_loaded_element(browser, xpath):
 
 def write_daily_report(report_str):
     if chrome_driver_path:
-        browser = webdriver.Chrome(chrome_driver_path)
+        browser = webdriver.Chrome(executable_path = chrome_driver_path)
     else:
         browser = webdriver.Chrome()
     try:
+        browser.set_window_size(1024, 800) # 屏幕太小，点不到写日志会报错！
+        browser.set_window_position(-1000000, 1000000) # 干脆移动到屏幕的左下角好了
         print("begin")
         browser.get("https://web.kd77.cn/")
         print(browser.title)
